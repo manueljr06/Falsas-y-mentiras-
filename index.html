@@ -251,21 +251,16 @@ footer{
     width:100%;
   }
 
-  .music-links{
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    width:100%;
-    margin-top:4px;
-  }
-
+/* AJUSTE FINAL DE ICONOS */
 .music-links{
   display:flex !important;
   flex-direction:row !important;
   flex-wrap:nowrap !important;
-  justify-content:space-between !important;
-  align-items:flex-start !important;
   width:100% !important;
   margin:8px auto 20px !important;
+  padding:0 !important;
   gap:0 !important;
+  align-items:flex-start !important;
 }
 
 .music-links a{
@@ -275,8 +270,14 @@ footer{
   align-items:center !important;
   justify-content:flex-start !important;
   text-align:center !important;
-  border-right:none !important;
-  padding:4px 1px !important;
+  color:#eee0c5 !important;
+  text-decoration:none !important;
+  font-family:Georgia,serif !important;
+  font-size:8px !important;
+  line-height:1.15 !important;
+  padding:4px 0 !important;
+  margin:0 !important;
+  border:none !important;
   min-width:0 !important;
 }
 
@@ -290,7 +291,10 @@ footer{
 
 .music-links span{
   display:block !important;
-  white-space:nowrap !important;
+  width:100% !important;
+  text-align:center !important;
+  color:#eee0c5 !important;
+  white-space:normal !important;
 }
 </style>
 </head>
