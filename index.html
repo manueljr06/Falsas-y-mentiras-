@@ -400,6 +400,52 @@ Una historia de promesas, contradicciones y verdades.
 FALSAS Y MENTIRAS · MG · 2026
 
 </footer>
+  </footer>
+
+<script>
+const canciones = [
+  "01-descaro.mp3",
+  "02-falsedad.mp3",
+  "03-guaya.mp3",
+  "04-bandida.mp3",
+  "05-dulce-amargo.mp3",
+  "06-como-cada-vez.mp3",
+  "07-vienes-y-te-vas.mp3",
+  "08-pentagrama-de-ti.mp3"
+];
+
+const botones = document.querySelectorAll(".play");
+let audio = new Audio();
+let actual = -1;
+
+botones.forEach((boton, i) => {
+  boton.addEventListener("click", () => {
+
+    if (actual === i && !audio.paused) {
+      audio.pause();
+      boton.textContent = "▶";
+      return;
+    }
+
+    if (actual !== -1) {
+      botones[actual].textContent = "▶";
+    }
+
+    audio.src = canciones[i];
+    audio.play();
+
+    actual = i;
+    boton.textContent = "❚❚";
+  });
+});
+
+audio.addEventListener("ended", () => {
+  if (actual !== -1) {
+    botones[actual].textContent = "▶";
+  }
+});
+</script>
 
 </body>
 </html>
+
