@@ -54,17 +54,19 @@ nav a{
   min-height:100vh;
   padding:110px 25px 60px;
   display:flex;
+  flex-direction:column;
   align-items:center;
-  justify-content:center;
-  gap:50px;
-  flex-wrap:wrap;
+  justify-content:flex-start;
+  gap:34px;
   background:
   radial-gradient(circle at 70% 30%,#7c281f99,transparent 35%),
   #17120f;
 }
 
 .hero-text{
-  max-width:600px;
+  width:min(900px,100%);
+  max-width:900px;
+  text-align:left;
 }
 
 .small{
@@ -94,10 +96,11 @@ h1 span{
 }
 
 .cover{
-  width:min(450px,90vw);
+  width:min(900px,100%);
+  margin:0 auto;
   box-shadow:0 30px 80px #000;
-  transform:rotate(1deg);
-  transition:.5s;
+  transform:none;
+  overflow:hidden;
 }
 
 .cover:hover{
@@ -106,7 +109,9 @@ h1 span{
 
 .cover img{
   width:100%;
+  height:auto;
   display:block;
+  object-fit:contain;
 }
 
 section{
@@ -237,26 +242,58 @@ footer{
 
   .song-name{
     font-size:21px;
+  }  .hero{
+    padding:100px 14px 45px;
+    gap:26px;
+  }
+
+  .hero-text{
+    width:100%;
+  }
+
+  .music-links{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    width:100%;
+    margin-top:4px;
+  }
+
+  .music-links a{
+    padding:8px 4px 12px;
+  }
+
+  .music-links a:nth-child(3n){
+    border-right:none;
+  }
+
+  .music-links img{
+    width:42px;
+    height:42px;
+    margin-bottom:8px;
+  }
+
+  .cover{
+    width:100%;
+    max-width:900px;
+    box-shadow:0 20px 45px #000;
   }
 }
 .music-links{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:0;
-    margin:28px auto 35px;
-    width:100%;
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  align-items:stretch;
+  margin:8px auto 20px;
+  width:min(900px,100%);
 }
 
 .music-links a{
-    color:#eee0c5;
-    text-decoration:none;
-    font-family:Georgia,serif;
-    font-size:11px;
-    text-align:center;
-    width:90px;
-    padding:4px 10px;
-    border-right:1px solid #8f7c5c55;
+  color:#eee0c5;
+  text-decoration:none;
+  font-family:Georgia,serif;
+  font-size:11px;
+  text-align:center;
+  min-width:0;
+  padding:4px 8px;
+  border-right:1px solid #8f7c5c55;
 }
 
 .music-links a:last-child{
@@ -318,7 +355,7 @@ ENTRAR AL ÁLBUM
 </a>
 </div>
 
-<div class="music-links">
+
 
 <div class="music-links">
 
